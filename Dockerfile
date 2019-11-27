@@ -17,4 +17,4 @@ RUN $sh 'mvn clean compile'
 RUN $sh 'mvn test'
 
 #Package the app
-RUN $sh 'package'
+RUN $sh 'mvn package'
