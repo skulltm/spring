@@ -1,0 +1,10 @@
+#!/bin/bash
+# Use this to re-version with one version ahead the Spring Boot - Atmosphere application docker file.
+
+row=$(cat ./Dockerfile | head -1)
+oldver=$(echo $row | awk '{print $10}')
+newver=$((( $oldver + 1 )))
+newrow="# Atmosphere Spring - Docker CI Image - Version: $newver"
+cat ./Dockerfile | sed "1 d" > Dockerfile.tmp
+(echo $newrow && cat ./Dockerfile.tmp) > tmp.Dockerfile
+mv tmp.Dockerfile Dockerfile && rm -f Dockerfile.tmp

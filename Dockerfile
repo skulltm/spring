@@ -1,3 +1,5 @@
+# Atmosphere Spring - Docker CI Image - Version: 20
+
 #Pull the image.
 FROM maven:3.6.2-jdk-8-openj9
 
