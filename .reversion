@@ -1,5 +1,5 @@
 #!/bin/bash
-# Use this to re-version with one version ahead the Spring Boot - Atmosphere application docker file.
+# Use this to re-version with one version ahead the Spring Boot Atmosphere Application's Dockerfile.
 
 row=$(cat ./Dockerfile | head -1)
 oldver=$(echo $row | awk '{print $10}')
